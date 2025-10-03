@@ -1,5 +1,5 @@
 # Базовый образ с JDK 17 (подходит для Railway)
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:21-jdk-alpine
 
 # Указываем рабочую директорию внутри контейнера
 WORKDIR /app
