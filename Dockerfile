@@ -1,14 +1,12 @@
-# Базовый образ с JDK 17 (подходит для Railway)
-FROM eclipse-temurin:21-jdk-alpine
-
-# Указываем рабочую директорию внутри контейнера
+# Этап сборки
+FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Копируем собранный jar
-COPY target/*.jar app.jar
-
-# Указываем порт (Railway сам пробросит $PORT)
+# Этап запуска
+FROM eclipse-temurin:21-jdk-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Запуск
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
