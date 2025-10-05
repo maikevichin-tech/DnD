@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Mastery Club</title>
+    <title>Таверна безумного шляпника</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-neutral-50 text-gray-900">
 <!-- Hero -->
-<section class="relative bg-gradient-to-br from-amber-50 to-white">
+<section class="relative bg-white">
     <div class="max-w-7xl mx-auto px-6 py-24 lg:py-32 lg:grid lg:grid-cols-12 lg:gap-12">
         <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
             <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                Ваш мастер D&D
+                Таверна Шляпника
             </h1>
             <p class="mt-6 text-lg text-gray-600">
-                Приветствую авантюристы!
-                Я <span class="font-semibold text-amber-700">Безумный шляпник</span>,
-                ваш проводник в мир D&D.
+                <br>Пространство настольных приключений в Могилёве 🏰
+                <br>Добро пожаловать, путник!
+                <br>Ты вошёл туда, где границы между фантазией и реальностью становятся тоньше.
+                <br>Таверна Шляпника — это место, где герои рождаются не из легенд, а из бросков кубиков и смелых решений.
+                <br>Мы играем в Dungeons & Dragons (ДнД) — настольную ролевую игру, где ты становишься героем своей собственной истории.
+                <br>🕯 Здесь каждый стол — это новый мир.
+                <br>🎲 Каждый бросок кубика — шаг в неизвестность.
+                <br>🧙‍♂️ Каждый вечер — приключение.
+
+                <br>📘 <span class="font-semibold text-amber-700">Не нужно опыта — только интерес.
+                <br>Всё остальное мы возьмём на себя!</span>
             </p>
             <div class="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
                 <a href="#pricing"
@@ -25,34 +33,39 @@
                     Расписание игр
                 </a>
                 <a href="#features" class="inline-block px-6 py-3 text-lg font-semibold rounded-xl border border-gray-300 hover:bg-gray-100 transition">
-                    Что такое D&D
+                    Записаться
                 </a>
             </div>
         </div>
         <div class="mt-12 lg:mt-0 lg:col-span-6 flex justify-center">
-            <img src="https://7kingdoms.ru/w/images/4/4a/Balerion_and_Aegon.jpg"
-                 alt="Coffee setup" class="rounded-2xl shadow-xl">
+            <img th:src="@{/hat2.png}" >
         </div>
     </div>
 </section>
 
 <!-- Features -->
-<section id="features" class="py-20 bg-white">
+<section id="features" class="py-20 bg-gradient-to-br from-amber-50 to-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-gray-900">Why Join Coffee Mastery Club?</h2>
-        <p class="mt-4 text-lg text-gray-600">Everything you need to become a true coffee artisan.</p>
+        <h2 class="text-3xl font-bold text-gray-900">Что такое D&D?</h2>
+        <p class="mt-4 text-lg text-gray-600">
+            <br>Dungeons & Dragons (D&D) — это игра, в которой история рождается прямо за столом.
+            <br>Игроки создают героев, а Мастер Игры описывает мир, приключения и испытания, которые их ждут.
+        </p>
         <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div class="p-6 bg-neutral-50 rounded-xl shadow-sm hover:shadow-md transition">
-                <h3 class="text-xl font-semibold text-amber-700">Pro Equipment Rental</h3>
-                <p class="mt-2 text-gray-600">Top-tier espresso machines and roasting gear delivered to your home, without the $5k price tag.</p>
+                <h3 class="text-xl font-semibold text-amber-700">🔹 Мастер игры</h3>
+                <p class="mt-2 text-gray-600">Рассказчик и проводник. Он не противник, а творец мира.</p>
             </div>
             <div class="p-6 bg-neutral-50 rounded-xl shadow-sm hover:shadow-md transition">
-                <h3 class="text-xl font-semibold text-amber-700">1-on-1 Coaching</h3>
-                <p class="mt-2 text-gray-600">Guided sessions with expert baristas and roasters to refine your skills step by step.</p>
+                <h3 class="text-xl font-semibold text-amber-700">🔹 Игроки</h3>
+                <p class="mt-2 text-gray-600">Главные герои. Каждый выбирает расу, класс, характер и путь своего персонажа.</p>
             </div>
             <div class="p-6 bg-neutral-50 rounded-xl shadow-sm hover:shadow-md transition">
-                <h3 class="text-xl font-semibold text-amber-700">Bay Area Coffee Culture</h3>
-                <p class="mt-2 text-gray-600">Join a community of like-minded professionals passionate about coffee science & craft.</p>
+                <h3 class="text-xl font-semibold text-amber-700">🔹 Реквизит</h3>
+                <p class="mt-2 text-gray-600">
+                    <br>Кубики - Решают судьбу. Один бросок может спасти город или погубить героя.
+                    <br>Воображение - Главный инструмент. Чем ярче оно работает, тем живее становится история.
+                </p>
             </div>
         </div>
     </div>
@@ -61,13 +74,20 @@
 <!-- Testimonials -->
 <section class="py-20 bg-amber-50">
     <div class="max-w-5xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-gray-900">Что такое D&D</h2>
+        <h2 class="text-3xl font-bold text-gray-900">
+            Как записаться?
+        <br>Выберите дату и время и свяжитесь с мастером через телеграм или инстаграм.
+        </h2>
         <div class="mt-12 grid gap-8 sm:grid-cols-2">
             <blockquote class="bg-white rounded-xl shadow p-6 text-left">
-                <p class="text-gray-700 italic">“Драть драконов.”</p>
+                <p class="text-gray-700 italic">
+                    💬 <a href="https://t.me/Taverna_Shlyapnika">Telegram</a>
+                </p>
             </blockquote>
             <blockquote class="bg-white rounded-xl shadow p-6 text-left">
-                <p class="text-gray-700 italic">“Драконы дерут тебя.”</p>
+                <p class="text-gray-700 italic">
+                    📸 <a href="https://instagram.com/taverna_shlyapnika">Instagram</a>
+                </p>
             </blockquote>
         </div>
     </div>
@@ -80,20 +100,19 @@
         <p class="mt-4 text-lg text-gray-600">Выберите подходящее вам время.</p>
         <div class="mt-12 flex justify-center">
             <div class="bg-neutral-50 rounded-2xl shadow-lg p-10 max-w-md">
-                <h3 class="text-2xl font-bold text-gray-900">Сегодня</h3>
-                <p class="mt-4 text-gray-600">Завтра</p>
-                <p class="mt-2 text-gray-500">Послезавтра</p>
+                <h3 class="text-2xl font-bold text-gray-900">Пт: 18:30</h3>
+                <h3 class="text-2xl font-bold text-gray-900">Сб-Вс: 10:00/17:00</h3>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
-<!--<footer class="bg-gray-900 text-gray-300 py-12">-->
-<!--    <div class="max-w-6xl mx-auto px-6 text-center">-->
-<!--        <p class="text-lg">Coffee Mastery Club • San Francisco Bay Area</p>-->
-<!--        <p class="mt-2">© 2025 All Rights Reserved</p>-->
-<!--    </div>-->
-<!--</footer>-->
+ Footer
+<footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-lg">D&D Club • Mogilev</p>
+        <p class="mt-2">© 2025 All Rights Reserved</p>
+    </div>
+</footer>
 </body>
 </html>
